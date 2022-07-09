@@ -1,0 +1,9 @@
+/*
+Permite especificar que preset vamos a utilizar
+es decir que es lo que va a traducir babel
+*/
+{
+    "presets": [
+        "@babel/preset-env"
+    ]
+}
