@@ -4,7 +4,5 @@
 import app from './app';
 import './database'
 
-
-
-app.listen(3005);
-console.log('Server listen on port',3005);
+app.listen(app.get('port'));
+console.log(`Servidor en el puerto ${app.get('port')}`);

@@ -41,6 +41,8 @@ app.get('/',(req,res)=>{
     res.json('Hola Bienvenido');
 })
 
+app.set('port',3005);
+
 app.use(proyectos);
 app.use(authRoutes);
 app.use(userRoutes);
