@@ -19,15 +19,8 @@ export const signUp= async (req, res)=>{
         const role=await Role.findOne({name:"user"})
         newUser.roles=[role._id];
     }
-    
     const saveUser= await newUser.save();
-    console.log(saveUser);
-
-    const token= jwt.sign({id: saveUser._id},config.SECRET,{
-        expiresIn: 86400 //Tiempo de expiración de 24 horas
-    })
-
-    res.status(200).json({token});
+    res.status(200).json(saveUser);
 }
 
 export const signin= async (req, res)=>{
