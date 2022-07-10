@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import config from '../config';
 import Role from '../models/Role';
 
-export const signUp= async (req, res)=>{
+export const signup= async (req, res)=>{
     const {username, email, password, roles}= req.body;
     
     const newUser= new User({

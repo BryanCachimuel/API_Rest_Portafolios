@@ -1,5 +1,4 @@
 import Portafolios from '../models/Portafolios';
-import Usuario from '../models/User';
 
 export const createPortafolios=async(req, res)=>{
     const {name, tipo}=req.body
